@@ -1,23 +1,68 @@
 aid: bezahl
+
 name: Bezahl
-description: 'Bezahl is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.prod.website-files.com/655f4a8ae7674cc7cb14f8d2/65d890b9439a219bb15a524b_Open-Graph-Image.jpg
+
+description: 'Bezahl provides digital payment management solutions tailored for the automotive trade. It offers a modern payment experience, digital financing, anti-money laundering prevention, and white‑label platforms for dealerships, aiming to automate financial processes and improve transparency across the automotive sector.'
+
 url: https://raw.githubusercontent.com/api-evangelist/bezahl/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
-- Company
-apis: []
+- Fintech
+- Automotive
+- Payments
+- DigitalPlatform
+- B2B
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/bezahl-hosts.yml
+- type: Vendors
+  url: vendors/bezahl-vendors.yml
+- type: Newsroom
+  url: https://www.bezahl.de/newsroom/andere-ueber-uns
+- type: Blog
+  url: https://www.bezahl.de/newsroom/blog
+- type: Documentation
+  url: https://docs.bezahl.de/
+- type: DomainSecurity
+  url: security/bezahl-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/bezahl
+  url: https://www.bezahl.de
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: No public developer documentation or API specification was found on the website.
+  evidence:
+    - url: https://www.bezahl.de/developer
+      status: 404
+  checked: '2026-09-28'
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

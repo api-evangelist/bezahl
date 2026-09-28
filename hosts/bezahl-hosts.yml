@@ -1,0 +1,107 @@
+generated: '2026-09-28'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 8
+  own: 8
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - docs
+  - other
+  - website
+hosts:
+- host: api.bezahl.de
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: bezahl.de
+  role: api
+  relation: own
+- host: dashboard.bezahl.de
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: bezahl.de
+  role: other
+  relation: own
+- host: docs.bezahl.de
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - Documentation
+  serves:
+  - docs
+  registrable_domain: bezahl.de
+  role: docs
+  relation: own
+- host: events.bezahl.de
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: bezahl.de
+  role: other
+  relation: own
+- host: feedback.bezahl.de
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: bezahl.de
+  role: other
+  relation: own
+- host: media.bezahl.de
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: bezahl.de
+  role: other
+  relation: own
+- host: mein.bezahl.de
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: bezahl.de
+  role: other
+  relation: own
+- host: www.bezahl.de
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Newsroom
+  - Blog
+  - Website
+  serves:
+  - cdn
+  vendor: cloudflare
+  registrable_domain: bezahl.de
+  role: website
+  relation: own
